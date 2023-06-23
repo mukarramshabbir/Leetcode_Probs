@@ -31,9 +31,6 @@ def isMatch(s, p):
 
     # Start the backtracking from the first indices
     return backtrack(0, 0)
-
-
-    
             
 if __name__=="__main__":
     s = 'a'
