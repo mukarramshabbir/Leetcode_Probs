@@ -4,19 +4,18 @@ def isValid(s):
     :rtype: bool
     """
     stack = []
-    brackets_map = {')': '(', '}': '{', ']': '['}
-
+    bracket_map={')':'(','}':'{',']':'['}
+    
     for c in s:
-        if c in ['(', '{', '[']:
+        if c in ['(','{','[']:
             stack.append(c)
         else:
             if not stack:
                 return False
-            top = stack.pop()
-            if top != brackets_map[c]:
+            top=stack.pop()
+            if top!=bracket_map[c]:
                 return False
-
-    return len(stack) == 0
+    return len(stack)==0
     
 
 if __name__=="__main__":
