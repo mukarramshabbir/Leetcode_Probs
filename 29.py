@@ -26,4 +26,3 @@ if __name__=="__main__":
     k = 3
     res=getAverages(nums,k)
     print(res)
-    print(nums)
