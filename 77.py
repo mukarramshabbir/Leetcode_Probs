@@ -1,20 +1,22 @@
-def combine(n, k):
-    """
-    :type n: int
-    :type k: int
-    :rtype: List[List[int]]
-    """
-    def backtrack(start,current_combination):
-        if len(current_combination)==k:
-            result.append(current_combination[:])
-            return
-        for num in range(start,n+1):
-            current_combination.append(num)
-            backtrack(num+1,current_combination)
-            current_combination.pop()
-    result=[]
-    backtrack(1,[])
-    return result
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        prev=None
+        current=head
+        while (current!= None ):
+            next_node=current.next
+            current.next=prev
+            prev=current
+            current=next_node
+        return prev
 
 if __name__=="__main__":
     n = 4
