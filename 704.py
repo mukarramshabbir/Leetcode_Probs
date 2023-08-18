@@ -1,16 +1,11 @@
-def peakIndexInMountainArray(arr):
+def search(nums, target):
     """
-    :type arr: List[int]
+    :type nums: List[int]
+    :type target: int
     :rtype: int
     """
-    left,right=0,len(arr)-1
-    while(left<right):
-        mid=left+(right-left)//2
-        if(arr[mid]>arr[mid+1]):
-            right=mid
-        else:
-            left=mid+1
-    return left
+    left,right=0,len(nums)-1
+    
 
 if __name__=="__main__":
     arr = [0,10,5,2]
